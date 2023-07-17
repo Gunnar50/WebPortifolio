@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from "react-icons/hi"
 
-export const HeroSection = () => {
+export default function HeroSection() {
   return (
 
     <section id="home">

@@ -1,3 +1,151 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scroll-link {
+    cursor: pointer;
+}
+
+.section-title {
+    background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Equivalent for Img */
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  /* Equivalent for GridContainer */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: 3rem;
+    place-items: center;
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      padding-bottom: 0;
+    }
+  }
+  
+  /* Equivalent for BlogCard */
+  .blog-card {
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+    text-align: center;
+    width: 400px;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .blog-card {
+      width: 100%;
+    }
+  }
+  
+  /* Equivalent for TitleContent */
+  .title-content {
+    text-align: center;
+    z-index: 20;
+    width: 100%;
+  }
+  
+  /* Equivalent for HeaderThree */
+  .header-three {
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #9cc9e3;
+    padding: .5rem 0;
+  }
+  
+  .header-three-title {
+    font-size: 3rem;
+  }
+  
+  .header-three-not-title {
+    font-size: 2rem;
+  }
+  
+  /* Equivalent for Hr */
+  .hr {
+    width: 50px;
+    height: 3px;
+    margin: 20px auto;
+    border: 0;
+    background: #d0bb57;
+  }
+  
+  /* Equivalent for Intro */
+  .intro {
+    width: 170px;
+    margin: 0 auto;
+    color: #dce3e7;
+    font-family: 'Droid Serif', serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 18px;
+  }
+  
+  /* Equivalent for CardInfo */
+  .card-info {
+    width: 100%;
+    padding: 0 50px;
+    color: #e4e6e7;
+    font-style: 2rem;
+    line-height: 24px;
+    text-align: justify;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .card-info {
+      padding:.3rem;
+    }
+  }
+  
+  /* Equivalent for UtilityList */
+  .utility-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 2.5rem 0;
+  }
+  
+  /* Equivalent for ExternalLinks */
+  .external-links {
+    color: #d4c0c0;
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    background: #6b3030;
+    border-radius: 15px;
+    transition: 0.5s;
+  }
+  
+  .external-links:hover {
+    background: #801414;
+  }
+  
+  /* Equivalent for TagList */
+  .tag-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  
+  /* Equivalent for Tag */
+  .tag {
+    color: #d8bfbf;
+    font-size: 1.5rem;
+  }
+  

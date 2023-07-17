@@ -6,6 +6,10 @@
     cursor: pointer;
 }
 
+.skills-tag {
+
+}
+
 .section-title {
     background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
     -webkit-background-clip: text;
@@ -63,9 +67,8 @@
   
   /* Equivalent for HeaderThree */
   .header-three {
-    font-weight: 500;
-    letter-spacing: 2px;
-    color: #9cc9e3;
+    font-weight: 400;
+    color: #c1d7e4;
     padding: .5rem 0;
   }
   
@@ -134,6 +137,10 @@
   
   .external-links:hover {
     background: #801414;
+  }
+
+  .transition {
+    transition: 0.3s
   }
   
   /* Equivalent for TagList */

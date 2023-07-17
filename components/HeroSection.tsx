@@ -24,7 +24,7 @@ export default function HeroSection() {
                     based in Los Angeles, CA. Working towards creating software that
                     makes life easier and more meaningful.
                 </p>
-                <a href="/Gustavo_Passarella_CV_SE-2023.pdf" download className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700">
+                <a href="/Gustavo_Passarella_CV_SE-2023.pdf" download className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 transition">
                     Download CV
                 </a>
             </div>

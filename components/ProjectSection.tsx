@@ -14,6 +14,7 @@ const projects = [
     tags: ["Mongo", "Express", "React"],
     github: "https://github.com/hqasmei/thankful-thoughts",
     link: "https://thankfulthoughts.io/",
+    readMoreLink: "",
   },
   {
     id: 1,
@@ -22,7 +23,8 @@ const projects = [
     image: "/2.png",
     tags: ["Mongo", "Express", "React"],
     github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    link: "",
+    readMoreLink: "",
   },
   {
     id: 2,
@@ -32,6 +34,7 @@ const projects = [
     tags: ["Mongo", "Express", "React"],
     github: "https://github.com/hqasmei/platoio",
     link: "https://platoio.com/register",
+    readMoreLink: "",
   },
   {
     id: 4,
@@ -42,101 +45,69 @@ const projects = [
     tags: ["Mongo", "Express", "React"],
     github: "https://github.com/hqasmei/thankful-thoughts",
     link: "https://thankfulthoughts.io/",
+    readMoreLink: "",
   },
  
 ]
 
-// export default function ProjectsSection() {
-//   return (
-//     <section>
-//         <h1 className="my-10 text-center font-bold text-4xl">
-//           Projects
-//           <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
-//         </h1>
-//         <div className="grid-container">
-//           {projects.map((project) => {
-//               return (
-//                 <div className="blog-card" key={project.id}>
-//                 <img className="img" src={project.image} />
-//                   <div className="title-content">
-//                     <h3 className="header-three header-three-title">{project.title}</h3>
-//                     <hr className="w-20 h-1 mx-auto my-4 bg-teal-500 border-0 rounded" />
-//                   </div>
-//                   <div className="card-info">{project.description}</div>
-//                   <div>
-//                     <div className="title-content">Stack</div>
-//                     <div className="tag-list">
-//                       {project.tags.map((t, i) => {
-//                         return <div className="tag" key={i}>{t}</div>;
-//                       })}
-//                     </div>
-//                   </div>
-//                   <div className="utility-list">
-//                   <Link href={project.github} target="_blank">
-//                          <BsGithub
-//                           size={40}
-//                           className="hover:-translate-y-1 transition-transform cursor-pointer"
-//                         />
-//                       </Link>
-//                       <Link href={project.link} target="_blank">
-//                         <BsArrowUpRightSquare
-//                           size={40}
-//                           className="hover:-translate-y-1 transition-transform cursor-pointer"
-//                         />
-//                       </Link>
-//                     {/* <a className="external-links" href={project.github}>Code</a>
-//                     <a className="external-links" href={project.link}>Source</a> */}
-//                   </div>
-//                 </div>
-//               );
-//           })}
 
-//         </div>
-
-//     </section>
-//   )
-// }
 
 export default function ProjectsSection() {
   return (
-    <section className="px-4 py-10 bg-gray-900 text-white">
-      <h1 className="my-10 text-center font-bold text-4xl">
-        Projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded-full"></hr>
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project) => {
-          return (
-            <div className="max-w-sm rounded overflow-hidden shadow-lg m-2 bg-gray-800 p-4" key={project.id}>
-              <img className="w-full h-64 object-cover" src={project.image} alt={project.title} />
-              <div className="py-4 text-center">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <hr className="w-20 h-1 mx-auto my-4 bg-teal-500 border-0 rounded-full" />
-                <p className="text-gray-500">{project.description}</p>
-                <div className="mt-4">
-                  <h4 className="font-semibold">Stack</h4>
-                  <ul className="flex flex-wrap justify-center mt-2">
-                    {project.tags.map((t, i) => (
-                      <li key={i} className="mr-2 mb-2 bg-gray-700 px-2 py-1 rounded-md">{t}</li>
-                    ))}
-                  </ul>
+    <section id="projects">
+        <h1 className="my-10 text-center font-bold text-4xl">
+          Projects
+          <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          {projects.map((project) => {
+              return (
+                <div className="flex flex-col rounded bg-gray-800" key={project.id}>
+                  <Link href={project.readMoreLink}><img src={project.image} alt={project.title} className="w-full object-cover"/></Link>
+                  <div className="px-4 py-4 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-center text-white mb-2">{project.title}</h3>
+                      <hr className="w-20 h-1 mx-auto my-4 bg-teal-500 border-0 rounded" />
+                      <div className="text-gray-400 leading-relaxed max-h-20 overflow-hidden">{project.description}</div>
+                      <Link href={project.readMoreLink} className="text-teal-500 hover:underline">
+                        Read more
+                      </Link>
+                      <div className="mt-6">
+                        <div className="flex flex-wrap mt-2 justify-center mt-2">
+                          {project.tags.map((t, i) => {
+                            return <span key={i} className="m-1 text-sm text-white bg-gray-500 px-2 py-1 rounded">{t}</span>;
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                    <div className={`mt-4 mb-4 flex ${project.link ? "justify-around" : "justify-center"}`}>
+                      <Link href={project.github} target="_blank">
+                        <div className="flex flex-col items-center">
+                          <BsGithub size={40} className="text-white transition-transform hover:-translate-y-1 cursor-pointer"/>
+                          <span>GitHub</span>
+                        </div>
+                      </Link>
+                      
+                      {project.link && (
+                        <Link href={project.link} target="_blank">
+                          <div className="flex flex-col items-center">
+                            <BsArrowUpRightSquare size={40} className="text-white transition-transform hover:-translate-y-1 cursor-pointer"/>
+                            <span>Live Demo</span>
+                          </div>
+                        </Link>
+                      )}
+                    </div>
+                  </div>
                 </div>
-                <ul className="flex justify-around mt-10">
-                  <Link href={project.github}>
-                    <BsGithub size={40} className="hover:-translate-y-1 transition-transform cursor-pointer text-white" />
-                  </Link>
-                  <Link href={project.link}>
-                    <BsArrowUpRightSquare size={40} className="hover:-translate-y-1 transition-transform cursor-pointer text-white" />
-                  </Link>
-                </ul>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+              );
+          })}
+        </div>
     </section>
   )
-}
+} 
+
+
+
 
 // export default function ProjectsSection() {
 //   return (

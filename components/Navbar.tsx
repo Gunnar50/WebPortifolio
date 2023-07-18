@@ -27,6 +27,10 @@ const NAV_ITEMS = [
     label: "Projects",
     page: "projects",
 },
+{
+    label: "Contact",
+    page: "contact",
+},
 ]
 
 const Navbar = () => {

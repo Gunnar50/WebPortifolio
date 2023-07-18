@@ -158,3 +158,58 @@
   
 
 
+/* Contact */
+
+.link-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+	grid-template-columns: repeat(3, minmax(85px, 220px));
+	gap: 40px;
+  padding: 40px 0 28px;
+}
+
+
+
+.link-col {
+  display: flex;
+	flex-direction: column;
+	max-width: 220px;
+	width: 100%;
+}
+
+
+.link-title {
+  font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.4);
+	margin-bottom: 16px;
+}
+
+
+
+.link-item {
+	color: rgba(255, 255, 255, 0.75);
+	transition: .3s ease;
+	position: relative;
+	left: 0;
+}
+
+.link-item:hover {
+  color: #fff;
+	left: 6px;
+}
+
+
+
+
+/* Breakpoints for responsive design
+  breakpoints: {
+    sm: 'screen and (max-width: 640px)',
+    md: 'screen and (max-width: 768px)',
+    lg: 'screen and (max-width: 1024px)',
+    xl: 'screen and (max-width: 1280px)'
+  },
+} */

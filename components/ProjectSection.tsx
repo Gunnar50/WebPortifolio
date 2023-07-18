@@ -63,43 +63,43 @@ export default function ProjectsSection() {
           {projects.map((project) => {
               return (
                 <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2" key={project.id}>
-                  <Link href={project.readMoreLink}><img src={project.image} alt={project.title} className="w-full object-cover"/></Link>
-                  <div className="px-4 py-4 flex-grow flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-semibold text-center text-white mb-2">{project.title}</h3>
-                      <hr className="w-20 h-1 mx-auto my-4 bg-teal-500 border-0 rounded" />
-                      <div className="text-gray-400 leading-relaxed max-h-20 overflow-hidden">{project.description}</div>
-                      <Link href={project.readMoreLink} className="text-teal-500 hover:underline">
-                        Read more
-                      </Link>
-                      <div className="mt-6">
-                        <div className="flex flex-wrap mt-2 justify-center mt-2">
-                          {project.tags.map((t, i) => {
-                            return <span key={i} className="m-1 text-sm text-white bg-gray-500 px-2 py-1 rounded">{t}</span>;
-                          })}
+                  <div className="flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2 transition-transform hover:-translate-y-2" key={project.id}>
+                    <Link href={project.readMoreLink}><img src={project.image} alt={project.title} className="w-full object-cover"/></Link>
+                    <div className="px-4 py-4 flex-grow flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-2xl font-semibold text-center text-white mb-2">{project.title}</h3>
+                        <hr className="w-20 h-1 mx-auto my-4 bg-teal-500 border-0 rounded" />
+                        <div className="text-gray-400 leading-relaxed max-h-20 overflow-hidden">{project.description}</div>
+                        <Link href={project.readMoreLink} className="text-teal-500 hover:underline">
+                          Read more
+                        </Link>
+                        <div className="mt-6">
+                          <div className="flex flex-wrap mt-2 justify-center mt-2">
+                            {project.tags.map((t, i) => {
+                              return <span key={i} className="m-1 text-sm text-white bg-gray-500 px-2 py-1 rounded">{t}</span>;
+                            })}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className={`mt-4 mb-4 flex ${project.link ? "justify-around" : "justify-center"}`}>
-                      <Link href={project.github} target="_blank">
-                        <div className="flex flex-col items-center">
-                          <BsGithub size={40} className="text-white transition-transform hover:-translate-y-1 cursor-pointer"/>
-                          <span>GitHub</span>
-                        </div>
-                      </Link>
-                      
-                      {project.link && (
-                        <Link href={project.link} target="_blank">
+                      <div className={`mt-4 mb-4 flex ${project.link ? "justify-around" : "justify-center"}`}>
+                        <Link href={project.github} target="_blank">
                           <div className="flex flex-col items-center">
-                            <BsArrowUpRightSquare size={40} className="text-white transition-transform hover:-translate-y-1 cursor-pointer"/>
-                            <span>Live Demo</span>
+                            <BsGithub size={40} className="text-white transition-transform hover:-translate-y-1 cursor-pointer"/>
+                            <span>GitHub</span>
                           </div>
                         </Link>
-                      )}
+                        
+                        {project.link && (
+                          <Link href={project.link} target="_blank">
+                            <div className="flex flex-col items-center">
+                              <BsArrowUpRightSquare size={40} className="text-white transition-transform hover:-translate-y-1 cursor-pointer"/>
+                              <span>Live Demo</span>
+                            </div>
+                          </Link>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
                 </SlideUp>
               );
           })}

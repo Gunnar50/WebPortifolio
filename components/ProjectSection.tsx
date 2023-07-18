@@ -62,7 +62,8 @@ export default function ProjectsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {projects.map((project) => {
               return (
-                <div className="flex flex-col rounded bg-gray-800" key={project.id}>
+                <SlideUp offset="-300px 0px -300px 0px">
+                <div className="flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2" key={project.id}>
                   <Link href={project.readMoreLink}><img src={project.image} alt={project.title} className="w-full object-cover"/></Link>
                   <div className="px-4 py-4 flex-grow flex flex-col justify-between">
                     <div>
@@ -99,6 +100,7 @@ export default function ProjectsSection() {
                     </div>
                   </div>
                 </div>
+                </SlideUp>
               );
           })}
         </div>

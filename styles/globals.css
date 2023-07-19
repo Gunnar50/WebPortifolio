@@ -202,7 +202,9 @@
 	left: 6px;
 }
 
-
+body.modal-open {
+  overflow: hidden;
+}
 
 
 /* Breakpoints for responsive design

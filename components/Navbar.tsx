@@ -2,11 +2,9 @@
 import React, {useState} from 'react'
 import { useTheme } from 'next-themes'
 import { usePathname } from "next/navigation"
-import {RiMoonFill, RiSunLine} from "react-icons/ri"
 import {IoMdMenu, IoMdClose} from "react-icons/io"
 import {BiAtom} from "react-icons/bi"
 import {Link as ScrollLink} from "react-scroll/modules"
-import Link from "next/link"
 
 
 interface NavItem {

@@ -1,9 +1,9 @@
 "use client"
 import React, {useState} from "react"
-import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import { AiOutlineClose } from "react-icons/ai"
 
 // Define a type for your projects
 type ProjectType = {
@@ -74,13 +74,13 @@ type ProjectModalProps = {
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 	return (
-	  <div className="fixed inset-0 z-50 overflow-y-auto">
+	  <div className="fixed inset-0 z-50 overflow-y-auto" key={project.id}>
 		<div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
 		  <div className="fixed inset-0 transition-opacity">
 			<div className="absolute inset-0 bg-black opacity-90"></div>
 		  </div>
 		  <div
-			className="inline-block align-middle bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all my-8 align-middle max-w-lg w-full transition-opacity transform ease-out duration-1000"
+			className="inline-block align-middle bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all my-8 align-middle max-w-lg w-full transition-opacity transform ease-out duration-500"
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="modal-headline"
@@ -88,12 +88,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 			<div className="relative pb-4">
 			  <img src={project.image} alt={project.title} width={500} className="w-full object-cover"/>
 			  <button 
-				className="absolute top-0 right-0 m-2 bg-white rounded-full p-1 leading-none text-black hover:text-gray-500 focus:outline-none"
+				className="absolute top-0 right-0 m-2 bg-white rounded-full p-1 drop-shadow-md leading-none text-black hover:text-gray-500 transition focus:outline-none"
 				onClick={onClose}
 			  >
-				<svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-				  <path d="M10 8.586l4.293-4.293 1.414 1.414L11.414 10l4.293 4.293-1.414 1.414L10 11.414l-4.293 4.293-1.414-1.414L8.586 10 4.293 5.707l1.414-1.414L10 8.586z" />
-				</svg>
+				<AiOutlineClose size={20}/>
+				
 			  </button>
 			</div>
 			<div className="px-4 pt-4 pb-8">

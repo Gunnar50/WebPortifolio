@@ -1,18 +1,34 @@
 import React from "react"
-import Image from "next/image"
+import { Link as ScrollLink } from "react-scroll/modules"
 
 const skills = [
+  { skill: "Python" },
+  { skill: "Java" },
   { skill: "HTML" },
   { skill: "CSS" },
   { skill: "JavaScript" },
   { skill: "TypeScript" },
-  { skill: "Python" },
   { skill: "React" },
   { skill: "Next.js" },
   { skill: "Tailwind CSS" },
   { skill: "Git" },
   { skill: "GitHub" },
+  { skill: "MySQL" },
+  { skill: "PostgreSQL" },
+  { skill: "MongoDB" },
   { skill: "Jupyter Notebooks" },
+  { skill: "Django" },
+  { skill: "NodeJS" },
+  { skill: "ExpressJS" },
+  { skill: "Pandas" },
+  { skill: "NumPy" },
+  { skill: "Pygame" },
+  { skill: "Game Development" },
+  { skill: "Object-Oriented Programming" },
+  { skill: "Kali Linux" },
+  { skill: "Cryptography" },
+  { skill: "Network Archtecture" },
+  { skill: "Cloud Computing" },
 ]
 
 export default function AboutSection() {
@@ -30,35 +46,34 @@ export default function AboutSection() {
               Get to know me!
             </h1>
             <p>
-              Hi, my name is Hosna and I am a{" "}
-              <span className="font-bold">{"highly ambitious"}</span>,
-              <span className="font-bold">{" self-motivated"}</span>, and
-              <span className="font-bold">{" driven"}</span> software engineer
-              based in Los Angeles, CA.
+              Hi, my name is Gustavo and I am a
+              <span className="font-bold"> highly ambitious</span>,
+              <span className="font-bold"> self-motivated</span>, and
+              <span className="font-bold"> driven</span> person
+              based in London, UK.
             </p>
             <br />
             <p>
-              I graduated from California State University, Northridge in 2019
-              with a BS in Computer Engineering and have been working in the
-              field ever since.
+              I have recently graduated from London Metropolitan University
+              with a BSc(Hons) in <span className="font-bold">Computer Networking & Cyber Security</span>.
             </p>
             <br />
             <p>
-              I have a wide range of hobbies and passions that keep me busy.
-              From reading, playing sports, traveling, to making YouTube videos,
-              I am always seeking new experiences and love to keep myself
-              engaged and learning new things.
+            I have used my <span className="font-bold text-teal-500">Python skills to develop a vulnerability-testing toolkit</span>{" "} 
+            for my final year project, designed with user-friendly reports and recommendations. This project can be found in the projects section.
             </p>
             <br />
             <p>
-              I believe that you should{" "}
-              <span className="font-bold text-teal-500">
-                never stop growing
-              </span>{" "}
-              and that&#39;s what I strive to do, I have a passion for
-              technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and am
-              always open to new opportunities. 🙂
+            I am currently working as Python, SQL database, and Game Development at FunTech where I teach children and young
+            adults computer science and software engineering concepts.
+            Furthermore, my knowledge of C# and C++ solidifies my foundation in software development.
+            </p>
+            <br />
+            <p>
+              I have a passion for{" "}
+              <span className="font-bold text-teal-500">technology</span> and a desire to always push the limits of what is
+              possible. I am excited to see where it can take me and I am
+              open to new opportunities, let's have a chat.
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
@@ -75,13 +90,7 @@ export default function AboutSection() {
                 )
               })}
             </div>
-            {/* <Image
-              src="/hero-image.png"
-              alt=""
-              width={325}
-              height={325}
-              className="hidden md:block md:relative md:bottom-4 md:left-32 md:z-0"
-            /> */}
+            
           </div>
         </div>
       </div>

@@ -19,12 +19,15 @@ export default function HeroSection() {
                 <p className="text-lg mt-4 mb-6 md:text-2xl">
                     I&#39;m a{" "}
                     <span className="font-semibold text-teal-600">
-                    Software Engineer{" "}
+                    Technology Graduate{" "}
                     </span>
-                    based in Los Angeles, CA. Working towards creating software that
-                    makes life easier and more meaningful.
+                    based in London, UK.
+                    <p>Currently working as 
+                      <span className='font-bold'> Python</span>, 
+                      <span className='font-bold'> MySQL</span> and 
+                      <span className='font-bold'> Game Development</span> tutor.</p>
                 </p>
-                <a href="/Gustavo_Passarella_CV_SE-2023.pdf" download className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 transition">
+                <a href="/Gustavo_Passarella_CV_SE-2023.pdf" download className="text-neutral-100 font-semibold px-6 py-3 bg-teal-900 rounded shadow hover:bg-teal-700 transition">
                     Download CV
                 </a>
             </div>

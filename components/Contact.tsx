@@ -10,18 +10,21 @@ const phoneNumber = "+447580577781"
 
 const ContactItems = [
     {
+        id:0,
         label: "Call",
         description: phoneNumber,
         link: "tel:+447580577781",
         icon: AiOutlinePhone,
     },
     {
+        id:1,
         label: "Email",
         description: email,
         link: `mailto:${email}`,
         icon: AiOutlineMail,
     },
     {
+        id:2,
         label: "WhatsApp",
         description: phoneNumber,
         link: `https://wa.me/${phoneNumber}`,
@@ -39,7 +42,7 @@ return (
 
         <div className="flex flex-col md:flex-row md:justify-between items-center md:space-x-0">
             {ContactItems.map((item) => (
-                <div className="flex flex-col items-center text-left mb-8 md:mb-0 md:w-1/3">
+                <div className="flex flex-col items-center text-left mb-8 md:mb-0 md:w-1/3" key={item.id}>
                 <h4 className="font-semibold uppercase text-gray-400 mb-4">{item.label}</h4>
                 <a href={item.link} target="_blank" className="flex items-center space-x-2 text-lg text-gray-300 hover:text-white transition-all link-item">
                 <item.icon size={24} />

@@ -77,16 +77,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 	  <div className="fixed inset-0 z-50 overflow-y-auto">
 		<div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
 		  <div className="fixed inset-0 transition-opacity">
-			<div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+			<div className="absolute inset-0 bg-black opacity-90"></div>
 		  </div>
 		  <div
-			className="inline-block align-middle bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all my-8 align-middle max-w-lg w-full"
+			className="inline-block align-middle bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all my-8 align-middle max-w-lg w-full transition-opacity transform ease-out duration-1000"
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="modal-headline"
 		  >
 			<div className="relative pb-4">
-			  <img src={project.image} alt={project.title} className="w-full object-cover"/>
+			  <img src={project.image} alt={project.title} width={500} className="w-full object-cover"/>
 			  <button 
 				className="absolute top-0 right-0 m-2 bg-white rounded-full p-1 leading-none text-black hover:text-gray-500 focus:outline-none"
 				onClick={onClose}
@@ -131,7 +131,7 @@ export default function ProjectsSection() {
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 					{projects.map((project: ProjectType) => {
 							return (
-								<SlideUp offset="-300px 0px -300px 0px">
+								<SlideUp offset="-300px 0px -300px 0px" key={project.id}>
 									<div className="flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2 transition-transform hover:-translate-y-2"
 										key={project.id}
 										onClick={() => openProject(project)}

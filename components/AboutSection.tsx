@@ -51,7 +51,7 @@ export default function AboutSection() {
               <span className="font-bold"> self-motivated</span>, and
               <span className="font-bold"> driven</span> person
               based in London, UK.
-            </p>
+            </p> 
             <br />
             <p>
               I have recently graduated from London Metropolitan University

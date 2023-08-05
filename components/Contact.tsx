@@ -36,7 +36,7 @@ const ContactItems = [
 export default function ContactSection() {
 
 
-return (
+return ( 
     <section id="contact" className="my-16 text-center p-10 text-white">
         <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
 

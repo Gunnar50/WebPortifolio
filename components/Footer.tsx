@@ -19,7 +19,7 @@ export default function Footer(){
           <a href="https://github.com/Gunnar50/" rel="noreferrer" target="_blank">
             <AiOutlineGithub
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30} 
+              size={30}
             />
           </a>
 

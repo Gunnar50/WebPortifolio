@@ -12,7 +12,7 @@ export default function HeroSection() {
             
             <div className="md:mt-2 md:w-1/2">
                 <Image src="/profile.png" alt="" width={300} height={300} priority className="rounded-full shadow-2xl"/>
-            </div> 
+            </div>
             <div className="md:mt-2 md:w-3/5">
                 <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-5xl section-title">Hi, I&#39;m Gustavo!</h1>
                 <p className="text-lg mt-4 mb-6 md:text-2xl">

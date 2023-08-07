@@ -60,7 +60,7 @@ const projects: ProjectType[] = [
 		github: "https://github.com/hqasmei/thankful-thoughts",
 		link: "https://thankfulthoughts.io/",
 		readMoreLink: "",
-	}, 
+	},
  
 ]
 

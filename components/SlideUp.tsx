@@ -21,7 +21,7 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
         })
       },
       { rootMargin: offset }
-    ) 
+    )
 
     if (ref.current) {
       observer.observe(ref.current)

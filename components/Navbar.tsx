@@ -13,7 +13,7 @@ interface NavItem {
   }
 
 const NAV_ITEMS = [
-{ 
+{
     label: "Home",
     page: "home",
 },

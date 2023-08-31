@@ -1,9 +1,9 @@
-import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import React from "react"
+import { AiOutlineMail, AiOutlinePhone, AiOutlineWhatsApp } from "react-icons/ai"
+import { BsArrowUpRightSquare, BsGithub } from "react-icons/bs"
 import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
-import { AiOutlineMail, AiOutlineWhatsApp, AiOutlinePhone } from "react-icons/ai";
 
 const email = "gustavo.passarella@hotmail.com"
 const phoneNumber = "+447580577781"
@@ -44,7 +44,7 @@ return (
             {ContactItems.map((item) => (
                 <div className="flex flex-col items-center text-left mb-8 md:mb-0 md:w-1/3" key={item.id}>
                 <h4 className="font-semibold uppercase text-gray-400 mb-4">{item.label}</h4>
-                <a href={item.link} target="_blank" className="flex items-center space-x-2 text-lg text-gray-300 hover:text-white transition-all link-item">
+                <a href={item.link} target="_blank" className="flex items-center space-x-2 text-lg text-gray-300 hover:text-white transition-all link-item" rel="noreferrer">
                 <item.icon size={24} />
                 <span>{item.description}</span>
                 </a>

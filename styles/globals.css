@@ -201,7 +201,11 @@
 
 body.modal-open {
   overflow: hidden;
-} 
+}
+
+.scale-105 {
+  transform: scale(1.05);
+}
 
 
 /* Breakpoints for responsive design

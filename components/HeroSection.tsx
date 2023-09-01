@@ -1,8 +1,8 @@
 "use client"
-import React from 'react'
 import Image from 'next/image'
-import { Link as ScrollLink } from "react-scroll/modules"
+import React from 'react'
 import { HiArrowDown } from "react-icons/hi"
+import { Link as ScrollLink } from "react-scroll/modules"
 
 export default function HeroSection() {
   return (
@@ -18,13 +18,14 @@ export default function HeroSection() {
                 <p className="text-lg mt-4 mb-6 md:text-2xl">
                     I&#39;m a{" "}
                     <span className="font-semibold text-teal-600">
-                    Technology Graduate{" "}
+                    Cyber Security Graduate{" "}
                     </span>
-                    based in London, UK.
-                    Currently working as 
+                    with a passion for technology, coding and development - based in London, UK
+                    <br></br>
+                    {/* Currently working as 
                       <span className='font-bold'> Python</span>, 
                       <span className='font-bold'> MySQL</span> and 
-                      <span className='font-bold'> Game Development</span> tutor.
+                      <span className='font-bold'> Game Development</span> tutor. */}
                 </p>
                 <a href="/Gustavo_Passarella_CV_SE-2023.pdf" download className="text-neutral-100 font-semibold px-6 py-3 bg-teal-900 rounded shadow hover:bg-teal-700 transition">
                     Download CV

@@ -1,40 +1,75 @@
 import React from "react"
-import { Link as ScrollLink } from "react-scroll/modules"
 
 const skills = [
-  { skill: "Python" },
-  { skill: "Java" },
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "React" },
-  { skill: "Next.js" },
-  { skill: "Tailwind CSS" },
-  { skill: "Git" },
-  { skill: "GitHub" },
-  { skill: "MySQL" },
-  { skill: "PostgreSQL" },
-  { skill: "MongoDB" },
-  { skill: "Jupyter Notebooks" },
-  { skill: "Django" },
-  { skill: "NodeJS" },
-  { skill: "ExpressJS" },
-  { skill: "Pandas" },
-  { skill: "NumPy" },
-  { skill: "Pygame" },
-  { skill: "Game Development" },
-  { skill: "Object-Oriented Programming" },
-  { skill: "Kali Linux" },
-  { skill: "Cryptography" },
-  { skill: "Network Archtecture" },
-  { skill: "Cloud Computing" },
+  "Python",
+  "Java",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Git",
+  "GitHub",
+  "MySQL",
+  "PostgreSQL",
+  "MongoDB",
+  "Jupyter Notebooks",
+  "Django",
+  "NodeJS",
+  "ExpressJS",
+  "Pygame",
+  "Game Development",
+  "Object-Oriented Programming",
+  "Kali Linux",
+  "Cryptography",
+  "Network Archtecture",
+  "Cloud Computing",
+]
+
+const frontend_skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Bootstrap",
+]
+
+const backend_skills = [
+  "Python",
+  "Django",
+  "NodeJS",
+  "ExpressJS",
+  "MongoDB",
+  "MySQL",
+  "PostgreSQL",
+  "Prisma",
+]
+
+const general_skills = [
+  "Python",
+  "Java",
+  "Git",
+  "GitHub",
+  "Game Development",
+  "Object-Oriented Programming",
+  "Windows OS",
+  "Linux OS",
+  "Cryptography",
+  "Network Archtecture",
+  "Network Protocols",
+  "Cisco Devices",
+  "Cloud Computing",
 ]
 
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
+      <div className="my-12 pb-12 md:pt-16 md:pb-20">
         <h1 className="text-center font-bold text-4xl">
           About Me
           <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
@@ -66,29 +101,55 @@ export default function AboutSection() {
             <p>
             I am currently working as Python, SQL database, and Game Development at FunTech where I teach children and young
             adults computer science and software engineering concepts.
-            Furthermore, my knowledge of C# and C++ solidifies my foundation in software development.
+            Furthermore, my knowledge of Fullstack Development with React, TypeScript and NodeJS  solidifies my foundation in software engineering.
             </p>
             <br />
             <p>
               I have a passion for{" "}
               <span className="font-bold text-teal-500">technology</span> and a desire to always push the limits of what is
               possible. I am excited to see where it can take me and I am
-              open to new opportunities, let's have a chat.
+              open to new opportunities, let&apos;s have a chat.
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">My Skills</h1>
+            <h1 className="text-2xl font-bold mb-4">My Skills</h1>
+            <h1 className="text-xl font-bold mb-4">Backend</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map((item, idx) => {
-                return (
+              {backend_skills.map((skill, idx) => (
                   <p
                     key={idx}
                     className="bg-gray-700 px-4 py-2 mr-2 mt-2 text-gray-200 rounded font-semibold scroll-link hover:bg-teal-700 transition"
                   >
-                    {item.skill}
+                    {skill}
                   </p>
                 )
-              })}
+              )}
+            </div>
+
+            <h1 className="text-xl font-bold mb-4 mt-10">Frontend</h1>
+            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+              {frontend_skills.map((skill, idx) => (
+                  <p
+                    key={idx}
+                    className="bg-gray-700 px-4 py-2 mr-2 mt-2 text-gray-200 rounded font-semibold scroll-link hover:bg-teal-700 transition"
+                  >
+                    {skill}
+                  </p>
+                )
+              )}
+            </div>
+
+            <h1 className="text-xl font-bold mb-4 mt-10">General Skills</h1>
+            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+              {general_skills.map((skill, idx) => (
+                  <p
+                    key={idx}
+                    className="bg-gray-700 px-4 py-2 mr-2 mt-2 text-gray-200 rounded font-semibold scroll-link hover:bg-teal-700 transition"
+                  >
+                    {skill}
+                  </p>
+                )
+              )}
             </div>
             
           </div>

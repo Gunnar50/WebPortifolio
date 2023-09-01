@@ -1,6 +1,6 @@
 "use client" // this is a client component
 
-import React, { useEffect, useRef, ReactNode } from "react"
+import React, { ReactNode, useEffect, useRef } from "react"
 interface Props {
   offset?: string
   children?: ReactNode
@@ -14,6 +14,7 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          // console.log("intersecting:", entry.isIntersecting);
           if (entry.isIntersecting) {
             entry.target.classList.remove("opacity-0")
             entry.target.classList.add("animate-slideUpCubiBezier")
@@ -24,6 +25,7 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
     )
 
     if (ref.current) {
+      // console.log("Ref", ref.current);
       observer.observe(ref.current)
     }
   }, [ref])

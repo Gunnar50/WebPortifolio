@@ -1,0 +1,42 @@
+[
+	{
+		"id": 0,
+		"title": "LinEsc Privilege Escalation",
+		"description":
+			"The toolkit not only aims to identify potential paths for privilege escalation, focusing on elements such as 'sudo', 'suid', capabilities, and world-writable files, but also has the capability to generate a comprehensive report. This report details the findings and offers recommendations for mitigations. Designed with the potential for future improvements and expansions, the tool provides a thorough analysis of system vulnerabilities. For a comprehensive overview of its functional components, please refer to the README file located in the main repository.",
+		"mainImage": "/projects/linesc/linesc-presentation.png",
+		"thumbnail": "/projects/linesc/linesc_thumb.png",
+		"tags": ["Python", "Bash", "Kali Linux"],
+		"github": "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
+		"link": "",
+		"filter": "Software Development",
+		"type": "Python Script"		
+	},
+	{
+		"id": 1,
+		"title": "Aurora Byte",
+		"description":
+			"This University group project focused on the development of a custom substitution encryption algorithm that was integrated with the Advanced Encryption Standard (AES) for enhanced security. The algorithm was implemented using Python and the crypto library. Additionally, the team developed a custom Graphical User Interface (GUI) using Tkinter, eliminating the requirement for users to operate the software via the command line. The algorithm operates on a symmetric key basis, generating a unique key during the encryption process, which is then used for decryption. The software is versatile, capable of encrypting and decrypting a wide range of file types, including text, images, and videos.",
+		"mainImage": "/projects/aurora byte/aurorabyte-presentation.png",
+		"thumbnail": "/projects/aurora byte/aurora-thumb.png",
+		"tags": ["Python", "Crypto", "AES", "Tkinter"],
+		"github": "https://github.com/Gunnar50/AuroraByteCipher",
+		"link": "",
+		"filter": "Software Development",
+		"type": "Python Software"
+	},
+	{
+		"id": 2,
+		"title": "Gentile Etiquetas Website",
+		"description":
+			"The website theme has been developed using Bootstrap and WordPress, specifically tailored for Gentile Etiquetas, a Brazilian firm specializing in the design and production of adhesive labels. The theme is fully dynamic, featuring an array of product examples and client testimonials on the main page, with corresponding sub-pages providing further details.",
+		"mainImage": "/projects/gentile/gentile-presentation.png",
+		"thumbnail": "/projects/gentile/gentile_thumb.jpg",
+		"tags": ["Wordpress", "PHP", "Bootstrap"],
+		"github": "",
+		"link": "http://gentileetiquetas.com.br",
+		"filter": "Web Development",
+		"type": "Web Development"
+	}
+ 
+]

@@ -5,7 +5,7 @@
 		"description":
 			"The toolkit not only aims to identify potential paths for privilege escalation, focusing on elements such as 'sudo', 'suid', capabilities, and world-writable files, but also has the capability to generate a comprehensive report. This report details the findings and offers recommendations for mitigations. Designed with the potential for future improvements and expansions, the tool provides a thorough analysis of system vulnerabilities. For a comprehensive overview of its functional components, please refer to the README file located in the main repository.",
 		"mainImage": "/projects/linesc/linesc-presentation.png",
-		"thumbnail": "/projects/linesc/linesc_thumb.png",
+		"thumbnail": "/projects/linesc/linesc-thumb.png",
 		"tags": ["Python", "Bash", "Kali Linux"],
 		"github": "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		"link": "",
@@ -31,7 +31,7 @@
 		"description":
 			"The website theme has been developed using Bootstrap and WordPress, specifically tailored for Gentile Etiquetas, a Brazilian firm specializing in the design and production of adhesive labels. The theme is fully dynamic, featuring an array of product examples and client testimonials on the main page, with corresponding sub-pages providing further details.",
 		"mainImage": "/projects/gentile/gentile-presentation.png",
-		"thumbnail": "/projects/gentile/gentile_thumb.jpg",
+		"thumbnail": "/projects/gentile/gentile-thumb.jpg",
 		"tags": ["Wordpress", "PHP", "Bootstrap"],
 		"github": "",
 		"link": "http://gentileetiquetas.com.br",

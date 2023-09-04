@@ -158,7 +158,7 @@ export default function ProjectsSection() {
 				</h1>
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 					{projects.map((project: ProjectType) => (
-								<SlideUp offset="-300px 0px -300px 0px" key={project.id}>
+								<SlideUp offset="-100px 0px -100px 0px" key={project.id}>
 									<div className="cursor-pointer group flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2 transition-transform overflow-hidden"
 										key={project.id}
 										onClick={() => openProject(project)}

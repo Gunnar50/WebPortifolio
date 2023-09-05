@@ -1,10 +1,10 @@
 "use client"
-import React, {useState} from 'react'
 import { useTheme } from 'next-themes'
 import { usePathname } from "next/navigation"
-import {IoMdMenu, IoMdClose} from "react-icons/io"
-import {BiAtom} from "react-icons/bi"
-import {Link as ScrollLink} from "react-scroll/modules"
+import React, { useState } from 'react'
+import { BiAtom } from "react-icons/bi"
+import { IoMdClose, IoMdMenu } from "react-icons/io"
+import { Link as ScrollLink } from "react-scroll/modules"
 
 
 interface NavItem {

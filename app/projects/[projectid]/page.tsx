@@ -26,22 +26,23 @@ function notFound() {
 	)
 }
 
-function projectFound() {
+function projectFound(project: ProjectType) {
 	return (
 		<div className='mt-48'>
 			Project Found
+			
+			<h3>{project.title}</h3>
+			<p>{project.description}</p>
 		</div>
 	)
 }
 
-function ProjectPage({params}) {
+function ProjectPage({params}: any) {
 	const projectId = params.projectid;
 	const [project, setProject] = useState<ProjectType | null>(null);
 
 	const getProjectById = () => {
-		for (let i = 0; i < projects.length; i++) {
-			console.log(projects[i]);
-			
+		for (let i = 0; i < projects.length; i++) {			
 			if( projects[i].id === parseInt(projectId)) {
 				setProject(projects[i]);
 			}
@@ -53,7 +54,7 @@ function ProjectPage({params}) {
 	}, []);
 	
 
-	return project ? projectFound() : notFound();
+	return project ? projectFound(project) : notFound();
 }
 
 

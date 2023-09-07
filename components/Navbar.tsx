@@ -1,5 +1,6 @@
 "use client"
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 import { usePathname } from "next/navigation"
 import React, { useState } from 'react'
 import { BiAtom } from "react-icons/bi"
@@ -43,11 +44,11 @@ const Navbar = () => {
                     <div className="flex items-center justify-between py-3 md:py-3 md:block">
                         <div className='md:py-3 md:block'>
                             <h2 className='text-2xl font-bold'>
-                                <ScrollLink smooth={true} to="home" className='scroll-link'>
+                                <Link href={"/"}>
                                     <div style={{display: 'flex', alignItems: 'center'}}>
                                         <BiAtom size="3rem" className='py-2.5'/> <span>Gustavo Passarella</span>
                                     </div>
-                                </ScrollLink>
+                                </Link>
                             </h2>
                         </div>
                         <div className='md:hidden'>

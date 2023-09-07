@@ -1,3 +1,4 @@
+import next from 'next';
 import { default as Image } from 'next/image';
 import Link from 'next/link';
 import { BsArrowLeft, BsArrowRight, BsArrowUpRightSquare, BsGithub } from 'react-icons/bs';
@@ -21,19 +22,28 @@ const projects: ProjectType[] = projectsData;
 
 const ProjectNotFound = () => {
 	return (
-		<div className='mt-48'>
-			404 Project not found.
+		<div className='mt-48 text-center'>
+			<span className='text-9xl text-teal-300'>404</span> 
+			<p className='text-3xl'>Project not found.</p>
 		</div>
 	)
 }
 
 type ProjectModalProps = {
 	project: ProjectType,
-	onNext: () => void,
-	onPrevious: () => void,
+	onNext: number,
+	onPrevious: number,
   };
 
   const ProjectFound: React.FC<ProjectModalProps> = ({ project, onNext, onPrevious }) => {
+	const NextProject = () => {
+		window.location.href = `/projects/${onNext}`
+	}
+
+	const PreviousProject = () => {
+		window.location.href = `/projects/${onPrevious}`
+	}
+
 	return (
 		<div key={project.id} className="text-center animate-fadeIn animation-delay-2 py-16 sm:py-32 md:py-40 md:text-left">
 			
@@ -80,39 +90,36 @@ type ProjectModalProps = {
 
 				<Image src={project.mainImage} alt={project.title} width={1400} height={300} className="w-full object-cover"/>
 				
-				<div className="flex justify-center my-3">
-					<div className='w-20 text-center mr-5 cursor-pointer' onClick={onPrevious}>
+				{/* <div className="flex justify-center my-3">
+					<div className='w-20 text-center mr-5 cursor-pointer' onClick={PreviousProject}>
 						<BsArrowLeft size={50} className="text-black inline-block"/>
 						<span className='text-black'>Previous</span>
 					</div>
 					
-					<div className='w-20 ml-5 text-center cursor-pointer' onClick={onNext}>
+					<div className='w-20 ml-5 text-center cursor-pointer' onClick={NextProject}>
 						<BsArrowRight size={50} className="text-black inline-block" />
 						<span className='text-black'>Next</span>
 					</div>
 
-				</div>
+				</div> */}
 		</div>
 	)
 }
+
+
 
 function ProjectPage({params}: any) {
 	const projectId = parseInt(params.projectid);
 	const selectedProject = projects.find(proj => proj.id === projectId);
 
-	const showNextProject = () => {
-		const nextProjecId = (projectId + 1) % projects.length; // Loop back to the first project after the last one
-		window.location.href = `/projects/${nextProjecId}`
-	};
-	  
-	  const showPreviousProject = () => {
-		const previousProjectId = (projectId - 1 + projects.length) % projects.length; // Loop back to the last project after the first one
-		window.location.href = `/projects/${previousProjectId}`
-	};
+	const nextProjecId: number = (projectId + 1) % projects.length; // Loop back to the first project after the last one
+	const previousProjectId: number = (projectId - 1 + projects.length) % projects.length; // Loop back to the last project after the first one
+
+	
 
 	return (
-		<div className='mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl'>
-			{selectedProject ? <ProjectFound project={selectedProject} onNext={showNextProject} onPrevious={showPreviousProject}/> : <ProjectNotFound/>}
+		<div className='mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl h-screen'>
+			{selectedProject ? <ProjectFound project={selectedProject} onNext={nextProjecId} onPrevious={previousProjectId}/> : <ProjectNotFound/>}
 		</div>
 	)
 }

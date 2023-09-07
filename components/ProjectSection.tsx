@@ -7,6 +7,7 @@ import { BsArrowLeft, BsArrowRight, BsArrowUpRightSquare, BsGithub } from "react
 import projectsData from "./projects.json"
 import SlideUp from "./SlideUp"
 
+
 // Define the projects type
 type ProjectType = {
 	id: number,
@@ -159,9 +160,9 @@ export default function ProjectsSection() {
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 					{projects.map((project: ProjectType) => (
 								<SlideUp offset="-100px 0px -100px 0px" key={project.id}>
-									<div className="cursor-pointer group flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2 transition-transform overflow-hidden"
+									<Link className="cursor-pointer group flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2 transition-transform overflow-hidden"
 										key={project.id}
-										onClick={() => openProject(project)}
+										href={`/projects/${project.id}`}
 										>
 										{/* PROJECT IMAGE THUMBNAIL */}
 										<Image src={project.thumbnail} alt={project.title} width={1400} height={1400}  className="w-full object-cover transition group-hover:scale-105"/>
@@ -176,7 +177,7 @@ export default function ProjectsSection() {
 											</div>
 											
 										</div>
-									</div>
+									</Link>
 								</SlideUp>
 					))}
 					{/* If a project is selected, show the modal */}

@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect, useState } from 'react';
+
+import React, { useState } from 'react';
 import projectsData from "../../../components/projects.json";
 
 type ProjectType = {
@@ -38,21 +38,8 @@ function projectFound(project: ProjectType) {
 }
 
 function ProjectPage({params}: any) {
-	const projectId = params.projectid;
-	const [project, setProject] = useState<ProjectType | null>(null);
-
-	const getProjectById = () => {
-		for (let i = 0; i < projects.length; i++) {			
-			if( projects[i].id === parseInt(projectId)) {
-				setProject(projects[i]);
-			}
-		}
-	}
-
-	useEffect(() => {
-		getProjectById();
-	}, []);
-	
+	const projectId = parseInt(params.projectid);
+	const project = projects.find(proj => proj.id === projectId);
 
 	return project ? projectFound(project) : notFound();
 }
